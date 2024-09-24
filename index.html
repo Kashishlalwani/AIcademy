@@ -151,40 +151,6 @@
             background-color: #23527c;
         }
 
-        /* Login Form Styles */
-        .login-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
-        }
-
-        .login-form input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .login-form button {
-            background-color: #337ab7;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .login-form button:hover {
-            background-color: #23527c;
-        }
-
         /* Testimonials Section */
         .testimonials {
             background-color: #f9f9f9;
@@ -261,18 +227,10 @@
             </ul>
             <div class="profile">
                 <img src="logo.jpeg" alt="Account Icon">
-                <a href="#" onclick="document.getElementById('login-modal').style.display='block'">Login</a>
+                <a href="#">Login</a>
             </div>
         </nav>
     </header>
-
-    <div id="login-modal" class="login-form" style="display:none;">
-        <h2>Login</h2>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-        <button onclick="document.getElementById('login-modal').style.display='none'">Cancel</button>
-    </div>
 
     <main>
         <div class="container">
@@ -295,25 +253,38 @@
                     <li><a href="#"><img src="pytorch.png" alt="PyTorch Tutorial">PyTorch Tutorial</a></li>
                     <li><a href="#"><img src="keras.png" alt="Keras Tutorial">Keras Tutorial</a></li>
                 </ul>
-                <section class="testimonials">
-                    <h2>What Our Students Say</h2>
-                    <div class="testimonial">"The courses are well-structured and easy to follow!"</div>
-                    <div class="author">- kashish singh</div>
-                    <div class="testimonial">"I learned so much in a short time, highly recommend!"</div>
-                    <div class="author">- diksha jambhule</div>
-                    <div class="testimonial">"The hands-on projects helped me apply what I learned!"</div>
-                    <div class="author">- shri prasad</div>
-                </section>
-            </div>
-        </main>
-    
-        <footer>
-            <ul>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </footer>
-    </body>
-    </html>
+                <button class="enroll-btn">Enroll Now</button>
+            </section>
+
+            <section>
+                <h1>Featured Case Studies</h1>
+                <ul>
+                    <li><a href="#">AI in Healthcare</a></li>
+                    <li><a href="#">AI in Finance</a></li>
+                    <li><a href="#">AI in Education</a></li>
+                    <li><a href="#">AI in Retail</a></li>
+                </ul>
+            </section>
+
+            <section class="testimonials">
+                <h2>What Our Students Say</h2>
+                <div class="testimonial">"The courses are well-structured and easy to follow!"</div>
+                <div class="author">- kashish singh</div>
+                <div class="testimonial">"I learned so much in a short time, highly recommend!"</div>
+                <div class="author">- diksha jambhule</div>
+                <div class="testimonial">"The hands-on projects helped me apply what I learned!"</div>
+                <div class="author">- shri prasad</div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
