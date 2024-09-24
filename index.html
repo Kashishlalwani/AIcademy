@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIcademy</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #666;
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav li {
+            margin-right: 20px;
+        }
+
+        header nav a {
+            color: #337ab7;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header nav a:hover {
+            color: #23527c;
+        }
+
+        .web-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* Pushes the profile section to the right */
+        }
+
+        .profile img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Main Styles */
+        main {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section h1, section h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        section ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        section li {
+            margin: 10px;
+        }
+
+        section a {
+            color: #337ab7;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        section a:hover {
+            color: #23527c;
+        }
+
+        /* Image Styles */
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Enroll Now Button Styles */
+        .enroll-btn {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .enroll-btn:hover {
+            background-color: #23527c;
+        }
+
+        /* Login Form Styles */
+        .login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .login-form button:hover {
+            background-color: #23527c;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        .author {
+            font-weight: bold;
+            color: #337ab7;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer li {
+            margin-right: 20px;
+        }
+
+        footer a {
+            color: #337ab7;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #23527c;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section h1, section h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="web-name">AIcademy</span>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="profile">
+                <img src="logo.jpeg" alt="Account Icon">
+                <a href="#" onclick="document.getElementById('login-modal').style.display='block'">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="login-modal" class="login-form" style="display:none;">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <button onclick="document.getElementById('login-modal').style.display='none'">Cancel</button>
+    </div>
+
+    <main>
+        <div class="container">
+            <section>
+                <h1>AI Courses</h1>
+                <ul>
+                    <li><a href="#"><img src="istockphoto-1452604857-612x612.jpg" alt="Machine Learning">Machine Learning</a></li>
+                    <li><a href="#"><img src="Deep-Learning-vs-Machine-Learning.jpg" alt="Deep Learning">Deep Learning</a></li>
+                    <li><a href="#"><img src="Natural-Language-Processing-1.png" alt="Natural Language Processing">Natural Language Processing</a></li>
+                    <li><a href="#"><img src="Deep-Learning-vs-Machine-Learning.jpg" alt="Computer Vision">Computer Vision</a></li>
+                </ul>
+                <button class="enroll-btn">Enroll Now</button>
+            </section>
+            
+            <section>
+                <h1>AI Tutorials</h1>
+                <ul>
+                    <li><a href="#"><img src="DS-With-Python-Banner.jpg" alt="Python for AI">Python for AI</a></li>
+                    <li><a href="#"><img src="ai.jpg" alt="AI tutorial">Artificial Intelligence Basics</a></li>
+                    <li><a href="#"><img src="pytorch.png" alt="PyTorch Tutorial">PyTorch Tutorial</a></li>
+                    <li><a href="#"><img src="keras.png" alt="Keras Tutorial">Keras Tutorial</a></li>
+                </ul>
+                <section class="testimonials">
+                    <h2>What Our Students Say</h2>
+                    <div class="testimonial">"The courses are well-structured and easy to follow!"</div>
+                    <div class="author">- kashish singh</div>
+                    <div class="testimonial">"I learned so much in a short time, highly recommend!"</div>
+                    <div class="author">- diksha jambhule</div>
+                    <div class="testimonial">"The hands-on projects helped me apply what I learned!"</div>
+                    <div class="author">- shri prasad</div>
+                </section>
+            </div>
+        </main>
+    
+        <footer>
+            <ul>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </footer>
+    </body>
+    </html>
